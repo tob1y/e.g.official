@@ -1,0 +1,37 @@
+网站需要下列 5 个文件名（均放在本文件夹 images/ 内）：
+
+1. batumi-skyline.png        — 巴统天际线（首页大图）
+2. night-bus-interior.png    — 过夜大巴蓝灯内景
+3. black-sea-coast.png       — 车窗外的黑海
+4. bus-selfie-turkey.png     — 土耳其大巴自拍
+5. turkey-road-transfer.png  — 土耳其公路转车
+
+——————————————————————————
+
+推荐（不用 PowerShell）：
+
+在上一级 eg-website 文件夹里，双击运行：
+
+  copy-images.cmd
+
+它会自动尝试从 Cursor 的 assets 目录复制；若找不到，请先把 5 张原始 PNG 放进：
+
+  eg-website\source-photos\
+
+再双击 copy-images.cmd。
+
+——————————————————————————
+
+仍可用于拷贝的工具（任选）：
+
+  copy-images.ps1 — 仅当你的电脑允许运行 PowerShell 脚本时使用。
+
+手动：把照片复制到 images\，并改成以上 5 个文件名。
+
+放好后，推荐在 eg-website 文件夹里双击 serve-local.cmd，浏览器访问 http://127.0.0.1:8080/
+（用本文件夹当网站根，可避免「预览根目录不对」导致图片全裂）。
+
+也可以直接双击 index.html；若仍无图，请改用 serve-local.cmd。
+
+若系统把文件存成了「名称.png」但实际扩展名是 .jpg（资源管理器里会像 xxx.png.jpg），
+请在 eg-website 目录双击 fix-image-names.cmd 自动改回 xxx.png。
